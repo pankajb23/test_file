@@ -1,0 +1,13 @@
+{
+  "name": "test_file",
+  "title": "test_file",
+  "id": "jid1-wn3xgmX2IdZVPg",
+  "description": "a basic add-on",
+  "author": "pankaj bhardwaj",
+  "license": "MPL 2.0",
+  "version": "0.1",
+  "contributors": "pankaj bhardwaj",
+  "permissions": {
+    "cross-domain-content":["http://www.hackerearth.com/"]
+	}
+}
