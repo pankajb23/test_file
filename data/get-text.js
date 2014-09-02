@@ -47,6 +47,7 @@ var createNode = function (e)
 };
 
 self.port.on("show", function (){
+    console.log("new request");
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
     request.send();
@@ -58,5 +59,6 @@ self.port.on("show", function (){
         reset();
         populateDiv("ongoing", "ONGOING", json);
         populateDiv("upcoming", "UPCOMING", json);
+
     };
 });
