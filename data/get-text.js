@@ -47,18 +47,15 @@ var createNode = function (e)
 };
 
 self.port.on("show", function (){
-    console.log("new request");
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
     request.send();
     request.onload = function () {
         var json = JSON.parse(request.responseText);
-        //console.log(jsonResponse);
-        //console.log("hello pankaj");
-        document.getElementById('indicator').style.display = 'none';
+        document.getElementById('indicator').style.display = 'none';        
+        self.port.emit("resize");
         reset();
         populateDiv("ongoing", "ONGOING", json);
         populateDiv("upcoming", "UPCOMING", json);
-
     };
 });
